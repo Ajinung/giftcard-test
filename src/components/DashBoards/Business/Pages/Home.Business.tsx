@@ -75,12 +75,12 @@ const BusinessHome = () => {
                 <img src={spiral} />
               </CardImage>
               <div>
-                <HText1>Top Gift Cards</HText1>
+                <HText1>Fund Gift Card Wallet</HText1>
                 <LText1 style={{ fontSize: "12px" }}>
-                  Trade gift cards for Fast Cash
+                  Fund your wallet to be able to create gift cards
                 </LText1>
               </div>
-              <CardButton>See Top Gift Cards</CardButton>
+              <CardButton>Fund Wallet</CardButton>
             </CardComponent>
             <CardComponent2>
               <CardImage2>
@@ -331,7 +331,7 @@ const CardButton = styled.button`
   border: none;
   outline: none;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 15px 20px;
   transition: all 350ms;
   :hover {
     cursor: pointer;
@@ -339,9 +339,10 @@ const CardButton = styled.button`
   }
 `;
 const HText1 = styled.div`
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
   color: orange;
+  width: 300px;
   @media screen and (min-width: 800px) {
     font-size: 29px;
   }

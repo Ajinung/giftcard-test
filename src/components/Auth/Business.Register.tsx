@@ -210,7 +210,16 @@ const BizzSignUp = () => {
               <span style={{ color: "blue" }}>Privacy Policy</span>.
             </p>
           </Div>
-          <Button type="submit">Create Account</Button>
+          <Button type="submit">Create Account</Button>{" "}
+          <span>
+            already have an account?
+            <NavLink
+              to="/business/login"
+              style={{ textDecoration: "none", color: "blue" }}
+            >
+              Log in
+            </NavLink>
+          </span>
         </Right>
       </Container>
     </div>
@@ -431,5 +440,10 @@ const Right = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  span {
+    font-size: 13px;
+    margin: 5px;
   }
 `;

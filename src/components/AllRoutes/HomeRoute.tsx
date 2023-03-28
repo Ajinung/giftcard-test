@@ -9,8 +9,19 @@ import SelectAccount from "../Auth/SelectAccount";
 import Homescreen from "../LandingPage/Homescreen";
 // import { dummy_user } from "../Global/ReduxState";
 import DefaultScreen from "../DefaultScreen";
+import { dummy_user } from "../Global/ReduxState";
 
 const HomeRoute = () => {
+  // const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   if (dummy_user?.role === "admin") {
+  //     navigate("/dashboard", { replace: true });
+  //   } else if (dummy_user?.role === "user") {
+  //     navigate("/user-dashboard", { replace: true });
+  //   }
+  // }, []);
+
   const elements = useRoutes([
     {
       path: "/",

@@ -99,3 +99,7 @@ export const singleBusiness = async (id: any) => {
 export const singleGiftCard = async (id: any) => {
   return axios.get(`${URl}/api/businessgiftcard/${id}`);
 };
+
+export const transactionHistory = async (id: any) => {
+  return axios.post(`${URl}//fundwallet/${id}`);
+};

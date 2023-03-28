@@ -15,14 +15,14 @@ const Header = () => {
   };
 
   const changeHeaderColor = () => {
-    if (window.scrollY >= 250) {
+    if (window.scrollY >= 150) {
       setShow(true);
     } else {
       setShow(false);
     }
   };
   const showBacktoTop = () => {
-    if (window.scrollY >= 400) {
+    if (window.scrollY >= 300) {
       settoTopShow(true);
     } else {
       settoTopShow(false);
@@ -67,7 +67,7 @@ const Header = () => {
             <ButtonHold>
               <NavLink to="/select-account" style={{ textDecoration: "none" }}>
                 <Button2 color="#fff" bg="#9342F6" style={{}}>
-                  Create an account
+                  Get Started
                 </Button2>
               </NavLink>
             </ButtonHold>
@@ -94,7 +94,7 @@ const Header = () => {
             <ButtonHold>
               <NavLink to="/select-account" style={{ textDecoration: "none" }}>
                 <Button2 color="#fff" bg="#9342F6">
-                  Create an account
+                  Get Started
                 </Button2>
               </NavLink>
             </ButtonHold>
@@ -195,10 +195,6 @@ const Button2 = styled.button<{ color: string; bg: string }>`
   :hover {
     cursor: pointer;
     background-color: #8929fd;
-  }
-
-  @media screen and (max-width: 768px) {
-    display: none;
   }
 `;
 

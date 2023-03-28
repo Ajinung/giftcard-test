@@ -8,14 +8,12 @@ import { allGiftCard } from "../../../API/Endpoint";
 import { useQuery } from "@tanstack/react-query";
 
 const ViewCards = () => {
-  const dummy = [{ card: "One" }, { card: "Two" }];
-
   const AllgiftCards = useQuery({
     queryKey: ["Allgiftcards"],
     queryFn: allGiftCard,
   });
 
-  console.log(AllgiftCards);
+  console.log("bus", AllgiftCards.data);
 
   return (
     <div>
@@ -37,8 +35,7 @@ const ViewCards = () => {
             {AllgiftCards?.data?.data?.data?.map((props: any) => (
               <Link
                 style={{ textDecoration: "none" }}
-                to={`/user-dashboard/card/${props?._id}`}
-              >
+                to={`/user-dashboard/card/${props?._id}`}>
                 <Card
                   pic={props?.BrandLogo}
                   busyname={props?.name}

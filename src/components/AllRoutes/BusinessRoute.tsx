@@ -12,9 +12,12 @@ import BusinessSupport from "../DashBoards/Business/Pages/Support.Business";
 import BusinessAccount from "../DashBoards/Business/Pages/Account.Business";
 import MobileNavs from "../DashBoards/Business/SideNav/Mobile.Nav";
 import BusinessMobileNavs from "../DashBoards/Business/SideNav/Mobile.Nav";
+import { useAppSelector } from "../Global/Store";
+import PayOut from "../DashBoards/Business/Pages/Payment";
 
 const BusinessRoutes = () => {
   const [showing, setShowing] = React.useState(false);
+  const user = useAppSelector((state) => state.bizClient);
 
   let element = useRoutes([
     {
@@ -41,17 +44,23 @@ const BusinessRoutes = () => {
       path: "/dashboard/account",
       element: <BusinessAccount />,
     },
+    {
+      path: "/pay-out/:id",
+      element: <PayOut />,
+    },
   ]);
   return (
     <div style={{ display: "flex", overflow: "hidden" }}>
       <WrapHead>
         <SideNav />
+        {/* {user?.status === "Business" ? <SideNav /> : null} */}
       </WrapHead>
       <Wrapper>{element}</Wrapper>
       <Shower
         onClick={() => {
           setShowing(!showing);
-        }}>
+        }}
+      >
         <TbArrowsLeftRight />
       </Shower>
       {showing ? <BusinessMobileNavs /> : null}
